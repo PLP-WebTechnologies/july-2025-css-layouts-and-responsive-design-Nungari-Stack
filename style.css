@@ -1,0 +1,114 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Layout using CSS Grid */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Header */
+.header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navigation using Flexbox */
+.navbar {
+  background: #444;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Content and Sidebar */
+.content {
+  background: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.sidebar {
+  background: #eaeaea;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Cards using Flexbox */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1 1 200px;
+  background: #ddd;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablets and up */
+@media (min-width: 768px) {
+  .main-content {
+    grid-template-columns: 2fr 1fr; /* 2-column layout */
+  }
+}
+
+/* Desktops and up */
+@media (min-width: 1024px) {
+  .main-content {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .cards {
+    justify-content: space-between;
+  }
+}
